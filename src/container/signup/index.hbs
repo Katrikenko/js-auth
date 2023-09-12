@@ -12,12 +12,28 @@
 		<h1 class="page__title">Sign up</h1>
 		<div class="form">
 			<div class="form__item">
-				Test
-				<span class="form__error">Error</span>
+				{{> field label="Email address" type="email" name="email" placeholder="Your email address"
+				action="signupForm.change" }}
+				<span name="email" class="form__error">Error</span>
+			</div>
+			<div class="form__item">
+				{{> field-password label="Password" type="{{type}}" name="password" placeholder="Password"
+				action="signupForm.change" }}
+				<span name="password" class="form__error">Error</span>
+			</div>
+			<div class="form__item">
+				{{> field-role label="Role" type="{{type}}" name="role"
+				action="signupForm.change" placeholder="Choose a role" list=data.role}}
+				<span name="role" class="form__error">Error</span>
+			</div>
+			<div class="form__item">
+				{{> field-checkbox label="Agree to terms and conditions" name="isConfirm"
+				action="signupForm.change" }}
+				<span name="isConfirm" class="form__error">Error</span>
 			</div>
 		</div>
 
-		<button class="button" type="button">Sign up</button>
+		<button onclick="signupForm.submit()" class="button" type="button">Sign up</button>
 		<span class="alert alert--error">Attention, an error!</span>
 	</form>
 </div>
