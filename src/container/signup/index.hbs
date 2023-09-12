@@ -1,0 +1,30 @@
+{{!
+Це код container файлу для index сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+}}
+
+<div class="page page--background">
+	<header>
+		{{> back-button}}
+	</header>
+
+	<form class="page__section">
+		<h1 class="page__title">Sign up</h1>
+		<div class="form">
+			<div class="form__item">
+				Test
+				<span class="form__error">Error</span>
+			</div>
+		</div>
+
+		<button class="button" type="button">Sign up</button>
+		<span class="alert alert--error">Attention, an error!</span>
+	</form>
+</div>
+
+{{!
+Цей код містить лише те, що буде виводитись в
+
+<body>
+	Адже наш layout/default.hbs має вже структуру HTML
+	}}
