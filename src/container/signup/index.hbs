@@ -17,9 +17,15 @@
 				<span name="email" class="form__error">Error</span>
 			</div>
 			<div class="form__item">
-				{{> field-password label="Password" type="{{type}}" name="password" placeholder="Password"
+				{{> field-password label="Password" type="{{type}}" name="password" placeholder="Enter your password"
 				action="signupForm.change" }}
 				<span name="password" class="form__error">Error</span>
+			</div>
+			<div class="form__item">
+				{{> field-password label="Repeat password" placeholder="Enter your password" type="{{type}}"
+				name="passwordAgain"
+				action="signupForm.change" }}
+				<span name="passwordAgain" class="form__error">Error</span>
 			</div>
 			<div class="form__item">
 				{{> field-role label="Role" type="{{type}}" name="role"
@@ -33,8 +39,8 @@
 			</div>
 		</div>
 
-		<button onclick="signupForm.submit()" class="button" type="button">Sign up</button>
-		<span class="alert alert--error">Attention, an error!</span>
+		<button onclick="signupForm.submit()" class="button button--disabled" type="button">Sign up</button>
+		<span class="alert alert--disabled">Attention, an error!</span>
 	</form>
 </div>
 
