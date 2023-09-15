@@ -75,3 +75,16 @@
 			}
 		}
 }
+
+
+.link__prefix {
+	color: s.color(gray);
+	font-size: 12px;
+}
+
+.link {
+	color: s.color(main);
+	@include s.click;
+	font-size: 12px;
+
+}
